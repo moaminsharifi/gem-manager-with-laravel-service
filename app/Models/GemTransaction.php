@@ -19,7 +19,7 @@ class GemTransaction extends Model
         'before',
         'value',
         'type',
-        'sing',
+        'sign',
 
     ];
 
@@ -29,7 +29,7 @@ class GemTransaction extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'sing' => 'boolean',
+        'sign' => 'boolean',
     ];
 
     /**
@@ -47,7 +47,7 @@ class GemTransaction extends Model
      */
     public function isIncremental()
     {
-        return $this->sing;
+        return $this->sign === true;
     }
 
     /**
@@ -57,6 +57,6 @@ class GemTransaction extends Model
      */
     public function isDecremental()
     {
-        return !$this->sing;
+        return $this->sign === false;
     }
 }
