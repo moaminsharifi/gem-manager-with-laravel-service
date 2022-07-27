@@ -40,7 +40,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
+    /**
+     * Get the gem associated with the user.
+     */
     public function gem()
     {
         return $this->hasOne(Gem::class);
