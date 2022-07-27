@@ -14,7 +14,8 @@ class Gem extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-
+        'gem',
+        'user_id'
     ];
 
     /**
