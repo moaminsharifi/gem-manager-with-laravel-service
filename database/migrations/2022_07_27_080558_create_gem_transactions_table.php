@@ -14,8 +14,20 @@ class CreateGemTransactionsTable extends Migration
     public function up()
     {
         Schema::create('gem_transactions', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->bigInteger('gem_id');
+            $table->bigInteger('before')
+                    ->unsigned()
+                    ->default(0);
+
+            $table->bigInteger('value')
+                    ->unsigned();
+
+            $table->string('type')->nullable();
+            $table->boolean('sign')->default(true);
             $table->timestamps();
+
+            $table->foreign('gem_id')->references('id')->on('gems')->onDelete('cascade');
         });
     }
 
