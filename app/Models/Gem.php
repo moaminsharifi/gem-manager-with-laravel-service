@@ -16,6 +16,7 @@ class Gem extends Model
     protected $fillable = [
 
     ];
+
     /**
      * Get the user that owns the gem.
      */
@@ -23,7 +24,7 @@ class Gem extends Model
     {
         return $this->belongsTo(User::class);
     }
-    
+
     /**
      * Get the transactions for the gem.
      */

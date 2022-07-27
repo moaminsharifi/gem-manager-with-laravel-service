@@ -26,7 +26,8 @@ class GemTransaction extends Model
     protected $casts = [
         'sing' => 'boolean',
     ];
-     /**
+
+    /**
      * Get the gem that owns the gemTransaction.
      */
     public function gem()
