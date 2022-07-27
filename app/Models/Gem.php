@@ -15,7 +15,7 @@ class Gem extends Model
      */
     protected $fillable = [
         'gem',
-        'user_id'
+        'user_id',
     ];
 
     /**
