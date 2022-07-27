@@ -15,6 +15,11 @@ class GemTransaction extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'gem_id',
+        'before',
+        'value',
+        'type',
+        'sing',
 
     ];
 
@@ -33,5 +38,25 @@ class GemTransaction extends Model
     public function gem()
     {
         return $this->belongsTo(Gem::class);
+    }
+
+    /**
+     * isIncremental function.
+     *
+     * @return bool
+     */
+    public function isIncremental()
+    {
+        return $this->sing;
+    }
+
+    /**
+     * isDecremental function.
+     *
+     * @return bool
+     */
+    public function isDecremental()
+    {
+        return !$this->sing;
     }
 }
