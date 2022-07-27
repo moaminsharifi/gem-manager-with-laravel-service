@@ -4,6 +4,7 @@
     - [Example of main flow of handling with service](#example-of-main-flow-of-handling-with-service)
     - [Setup](#setup)
     - [Tests](#tests)
+    - [git commit style](#git-commit-style)
 
 
 
@@ -39,4 +40,10 @@ composer install
 
 ```
 composer test
+```
+
+### git commit style
+```bash
+# // [Add,Change,Update,Typo,Composer] ..
+# -> can be issue number or -
 ```
